@@ -1,0 +1,7 @@
+apiVersion: v1
+metadata:
+  name: envs-config
+data:
+  PD_HOST: svc-agri-app-rs
+  PD_PORT: "8001"
+kind: ConfigMap

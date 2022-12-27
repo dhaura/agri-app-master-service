@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: agri-app-master
+  name: agri-app-master
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: agri-app-master
+  strategy: {}
+  template:
+    metadata:
+      labels:
+        app: agri-app-master
+    spec:
+      containers:
+      - args:
+        - agri_app_master
+        image: dhaura/agri-app-master:latest
+        name: master
+        ports:
+        - containerPort: 8000
+        envFrom:
+          - configMapRef:
+              name: envs-config
+        resources: {}
+status: {}
