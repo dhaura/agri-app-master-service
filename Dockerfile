@@ -8,6 +8,6 @@ COPY app.py .
 COPY config.py .
 COPY messages.py .
 
-EXPOSE 8000
+EXPOSE 80
 
 ENTRYPOINT ["python", "./app.py"]
