@@ -4,4 +4,6 @@ metadata:
 data:
   PD_HOST: svc-agri-app-rs
   PD_PORT: "8001"
+  TH_HOST: ur-web-app-lb
+  TH_PORT: "8002"
 kind: ConfigMap

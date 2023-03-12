@@ -29,6 +29,18 @@ def predict_disease():
     return make_response(response.json())
 
 
+@app.route('/read_temperature/<sector>', methods=["GET"])
+def get_temp_readings(sector):
+    response = requests.get(f'http://{config.TH_HOST}:{config.TH_PORT}/read_temperature/' + sector)
+    return make_response(response.json())
+
+
+@app.route('/read_humidity/<sector>', methods=["GET"])
+def get_humidity_readings(sector):
+    response = requests.get(f'http://{config.TH_HOST}:{config.TH_PORT}/read_humidity/' + sector)
+    return make_response(response.json())
+
+
 if __name__ == "__main__":
     app.run(
         debug=config.DEBUG_MODE, host=config.MASTER_HOST, port=os.getenv('PORT', config.MASTER_PORT)
