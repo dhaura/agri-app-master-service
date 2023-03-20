@@ -18,7 +18,7 @@ spec:
       containers:
       - args:
         - agri_app_master
-        image: dhaura/agri-app-master:latest-x64
+        image: dhaura/agri-app-master-new:latest-x64
         name: master
         ports:
         - containerPort: 80
@@ -40,9 +40,6 @@ spec:
   ports:
   - port: 80
     protocol: TCP
-    targetPort: 8000
+    targetPort: 80
   selector:
     app: agri-app-master
-  type: LoadBalancer
-status:
-  loadBalancer: {}

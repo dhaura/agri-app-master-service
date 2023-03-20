@@ -17,9 +17,9 @@ logger.addHandler(handler)
 
 DEBUG_MODE = os.getenv("DEBUG_MODE", False)
 
-MASTER_HOST = os.getenv('MASTER_HOST', '127.0.0.1')
+MASTER_HOST = os.getenv('MASTER_HOST', '0.0.0.0')
 
-MASTER_PORT = os.getenv('MASTER_PORT', 8000)
+MASTER_PORT = os.getenv('MASTER_PORT', 80)
 
 PD_HOST = os.getenv('PD_HOST', '127.0.0.1')
 

@@ -10,7 +10,6 @@ spec:
 #      paths:
 #         backend:
 #           service:
-  - host: localhost
   - http:
       paths:
       - path: /

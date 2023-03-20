@@ -43,5 +43,5 @@ def get_humidity_readings(sector):
 
 if __name__ == "__main__":
     app.run(
-        debug=config.DEBUG_MODE, host=config.MASTER_HOST, port=os.getenv('PORT', config.MASTER_PORT)
+        debug=config.DEBUG_MODE, host=config.MASTER_HOST, port=config.MASTER_PORT
     )
