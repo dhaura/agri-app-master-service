@@ -3,7 +3,7 @@ kind: Ingress
 metadata:
   name: ing-agri-app
 spec:
-  ingressClassName: traefik
+  ingressClassName: nginx
   rules:
 # - host: myapp.com
 #   http:

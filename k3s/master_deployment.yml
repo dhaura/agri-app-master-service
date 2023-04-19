@@ -15,7 +15,6 @@ spec:
       labels:
         app: agri-app-master
     spec:
-      nodeName: node22
       containers:
       - args:
         - agri_app_master
